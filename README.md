@@ -32,9 +32,11 @@ bash myip
 ```
 
 
-or if you dont want to type 'bash' before 'myip' 
+If you dont want to type 'bash' before 'myip'
+
 Paste this into the path where bash script is stored
-(Only do this if you dont care if anyone can execute)
+
+(Only do this if you dont care if any user on computer can execute script)
 ```
 cd /usr/local/bin
 
