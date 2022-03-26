@@ -28,3 +28,4 @@ ifconfig en0 | grep 'inet 192' | cut -d " " -f 2
 ```
 bash myip
 ```
+--- 
