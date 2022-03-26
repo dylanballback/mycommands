@@ -34,7 +34,7 @@ bash myip
 
 If you dont want to type 'bash' before 'myip'
 
-Paste this into the path where bash script is stored
+Paste this into your terminal window
 
 (Only do this if you dont care if any user on computer can execute script)
 ```
