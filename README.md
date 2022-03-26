@@ -15,8 +15,8 @@ sudo nano myiptest
 ```
 
 Paste this into your terminal after nano opens 'myip' and it will:
-Allow you to run bash script in any directory
-Display local ip address
+- Allow you to run bash script in any directory
+- Display local ip address
 ```
 PATH=${PATH}:$HOME/bin
 export PATH
