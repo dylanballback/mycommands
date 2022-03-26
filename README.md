@@ -43,7 +43,7 @@ cd /usr/local/bin
 chmod 777 myip
 ```
 
-To run 'myip' bash script after doing 'chmod 777 myip' 
+Now you just need 'myip' to run the bash script 
 ```
 myip
 ```
