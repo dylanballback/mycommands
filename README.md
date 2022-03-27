@@ -48,4 +48,17 @@ Now you just need 'myip' to run the bash script
 myip
 ```
 
---- 
+---
+---
+---
+---
+---
+
+## Connecting to Websocket through terminal
+
+Paste this into your terminal window
+```
+wscat --connect ws://192.168.1.64:80/
+```
+ - '192.168.1.64' = ip address to connect to
+ - '80' = port to connect to 
