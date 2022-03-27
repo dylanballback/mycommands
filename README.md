@@ -1,7 +1,7 @@
-# My Commands
 
 
-## Bash script to get local ip
+
+# Bash script to get local ip
 Paste this into your terminal window and it will:
 - go to /usr/local/bin to store bash script
 - Create file name 'myip'
@@ -53,8 +53,13 @@ myip
 ---
 ---
 ---
+---
+---
+---
+---
+---
 
-## Connecting to Websocket through terminal
+# Connecting to a Websocket through terminal
 
 Paste this into your terminal window
 ```
