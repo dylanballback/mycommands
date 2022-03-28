@@ -9,9 +9,9 @@ Paste this into your terminal window and it will:
 ```
 cd /usr/local/bin
 
-sudo touch myiptest
+sudo touch myip
 
-sudo nano myiptest
+sudo nano myip
 ```
 
 Paste this into your terminal after nano opens 'myip' and it will:
