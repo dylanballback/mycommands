@@ -48,16 +48,6 @@ Now you just need 'myip' to run the bash script
 myip
 ```
 
----
----
----
----
----
----
----
----
----
----
 
 # Connecting to a Websocket through terminal
 
