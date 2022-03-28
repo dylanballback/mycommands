@@ -40,7 +40,7 @@ Paste this into your terminal window
 ```
 cd /usr/local/bin
 
-chmod 777 myip
+sudo chmod 777 myip
 ```
 
 Now you just need 'myip' to run the bash script 
