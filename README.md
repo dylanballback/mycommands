@@ -57,3 +57,31 @@ wscat --connect ws://192.168.1.64:80/
 ```
  - '192.168.1.64' = ip address to connect to
  - '80' = port to connect to 
+
+
+
+
+# Python Read Serial Data
+
+```python
+
+import serial
+
+
+
+if __name__ == '__main__':
+    #Serial Connection Set Up ('usb address', 'baudrate')
+    ser = serial.Serial('/dev/tty.usbmodem11201', 112500, timeout=1)
+    ser.reset_input_buffer()
+
+
+while True:
+    #Check if there is new serial data
+    if ser.in_waiting > 0:
+        #Convert Binary to String
+        line = ser.readline().decode('utf-8').rstrip()
+  
+
+        print(line)
+        
+```
