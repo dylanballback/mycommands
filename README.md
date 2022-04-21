@@ -108,8 +108,11 @@ G1 X200.00 E30 F500.0 ; intro line - added for REVO SIX
 ```
 After the ```G-Code G1 X60 E9 F1000 ; intro line ```
 but before the ```G-Code G92 E0 ```
+
 <p>&nbsp;</p>
+
 What my full **Start G-Code** (MK3S+ 0.8 Nozzle) looks like 
+
 ```G-Code
 M862.3 P "[printer_model]" ; printer model check
 M862.1 P[nozzle_diameter] ; nozzle diameter check
@@ -130,6 +133,7 @@ G1 X200.00 E30 F500.0 ; intro line
 G92 E0
 M221 S95
 ```
+
 <p>&nbsp;</p>
 
 ## End G-Code
@@ -137,7 +141,8 @@ Insert
 ```G-Code 
 G1 E-18 F800 ;retract filament from meltzone - added for REVO SIX
 ```
-Before ```G-Code 
+Before 
+```G-Code 
 M104 S0 ; turn off temperature
 M140 S0 ; turn off heatbed
 ```
