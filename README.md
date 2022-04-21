@@ -129,7 +129,9 @@ G1 Z0.2 F720
 G1 Y-3 F1000 ; go outside print area
 G92 E0
 G1 X60 E9 F1000 ; intro line
-G1 X200.00 E30 F500.0 ; intro line
+
+G1 X200.00 E30 F500.0 ; intro line - added for REVO SIX
+
 G92 E0
 M221 S95
 ```
@@ -147,13 +149,17 @@ M104 S0 ; turn off temperature
 M140 S0 ; turn off heatbed
 ```
 <p>&nbsp;</p>
+
 What my full **End G-Code** (MK3S+ 0.8 Nozzle) looks like 
+
 ```G-Code 
 G4 ; wait
 M221 S100 ; reset flow
 M900 K0 ; reset LA
 {if print_settings_id=~/.*(DETAIL @MK3|QUALITY @MK3|@0.25 nozzle MK3).*/}M907 E538 ; reset extruder motor current{endif}
+
 G1 E-18 F800 ;retract filament from meltzone - added for REVO SIX
+
 M104 S0 ; turn off temperature
 M140 S0 ; turn off heatbed
 M107 ; turn off fan
