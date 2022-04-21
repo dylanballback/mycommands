@@ -173,3 +173,5 @@ M107 ; turn off fan
 G1 X0 Y200 F3000 ; home X axis
 M84 ; disable motors
 ```
+
+### Don't forget to save printer presets, and add "REVO SCRIPT" at the end of the printer preset name.
