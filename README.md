@@ -97,8 +97,10 @@ while True:
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-#Prusa Slicer Custom G-Code for Revo Nozzle Filiment Retract
-Go to Prusa Slicer --> Printer Settings --> Custom G-Code
+
+
+# Prusa Slicer Custom G-Code for Revo Nozzle Filiment Retract
+Go to **Prusa Slicer --> Printer Settings --> Custom G-Code**
 ## Start G-Code
 Insert after the ``` G1 X60 E9 F1000 ; intro line ``` 
 ```G-Code
