@@ -102,10 +102,11 @@ while True:
 # Prusa Slicer Custom G-Code for Revo Nozzle Filiment Retract
 Go to **Prusa Slicer --> Printer Settings --> Custom G-Code**
 ## Start G-Code
-Insert after the ``` G1 X60 E9 F1000 ; intro line ``` 
+Insert  
 ```G-Code
 G1 X200.00 E30 F500.0 ; intro line
 ```
-and before the ``` G92 E0 ```
+After the ```G-Code G1 X60 E9 F1000 ; intro line ```
+Before the ```G-Code G92 E0 ```
 
 ## End G-Code
