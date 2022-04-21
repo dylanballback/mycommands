@@ -100,8 +100,11 @@ while True:
 
 
 # Prusa Slicer Custom G-Code for Revo Nozzle Filiment Retract
+
 [Reference](https://e3d-online.zendesk.com/hc/en-us/articles/4406857421213-Start-and-End-G-code-for-faster-nozzle-changes)
+
 Go to **Prusa Slicer --> Printer Settings --> Custom G-Code**
+
 ## Start G-Code
 Insert  
 ```G-Code
