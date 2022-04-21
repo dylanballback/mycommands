@@ -48,6 +48,9 @@ Now you just need 'myip' to run the bash script
 myip
 ```
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 # Connecting to a Websocket through terminal
 
@@ -59,6 +62,9 @@ wscat --connect ws://192.168.1.64:80/
  - '80' = port to connect to 
 
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 # Python Read Serial Data
@@ -85,3 +91,19 @@ while True:
         print(line)
         
 ```
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+#Prusa Slicer Custom G-Code for Revo Nozzle Filiment Retract
+Go to Prusa Slicer --> Printer Settings --> Custom G-Code
+## Start G-Code
+Insert after the ``` G1 X60 E9 F1000 ; intro line ``` 
+```G-Code
+G1 X200.00 E30 F500.0 ; intro line
+```
+and before the ``` G92 E0 ```
+
+## End G-Code
