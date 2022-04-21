@@ -104,9 +104,55 @@ Go to **Prusa Slicer --> Printer Settings --> Custom G-Code**
 ## Start G-Code
 Insert  
 ```G-Code
-G1 X200.00 E30 F500.0 ; intro line
+G1 X200.00 E30 F500.0 ; intro line - added for REVO SIX
 ```
 After the ```G-Code G1 X60 E9 F1000 ; intro line ```
-Before the ```G-Code G92 E0 ```
+but before the ```G-Code G92 E0 ```
+<p>&nbsp;</p>
+What my full **Start G-Code** (MK3S+ 0.8 Nozzle) looks like 
+```G-Code
+M862.3 P "[printer_model]" ; printer model check
+M862.1 P[nozzle_diameter] ; nozzle diameter check
+M115 U3.10.1 ; tell printer latest fw version
+G90 ; use absolute coordinates
+M83 ; extruder relative mode
+M104 S[first_layer_temperature] ; set extruder temp
+M140 S[first_layer_bed_temperature] ; set bed temp
+M190 S[first_layer_bed_temperature] ; wait for bed temp
+M109 S[first_layer_temperature] ; wait for extruder temp
+G28 W ; home all without mesh bed level
+G80 ; mesh bed leveling
+G1 Z0.2 F720
+G1 Y-3 F1000 ; go outside print area
+G92 E0
+G1 X60 E9 F1000 ; intro line
+G1 X200.00 E30 F500.0 ; intro line
+G92 E0
+M221 S95
+```
+<p>&nbsp;</p>
 
 ## End G-Code
+Insert
+```G-Code 
+G1 E-18 F800 ;retract filament from meltzone - added for REVO SIX
+```
+Before ```G-Code 
+M104 S0 ; turn off temperature
+M140 S0 ; turn off heatbed
+```
+<p>&nbsp;</p>
+What my full **End G-Code** (MK3S+ 0.8 Nozzle) looks like 
+```G-Code 
+G4 ; wait
+M221 S100 ; reset flow
+M900 K0 ; reset LA
+{if print_settings_id=~/.*(DETAIL @MK3|QUALITY @MK3|@0.25 nozzle MK3).*/}M907 E538 ; reset extruder motor current{endif}
+G1 E-18 F800 ;retract filament from meltzone - added for REVO SIX
+M104 S0 ; turn off temperature
+M140 S0 ; turn off heatbed
+M107 ; turn off fan
+{if max_layer_z < max_print_height}G1 Z{z_offset+min(max_layer_z+30, max_print_height)}{endif} ; Move print head up
+G1 X0 Y200 F3000 ; home X axis
+M84 ; disable motors
+```
