@@ -106,8 +106,12 @@ Insert
 ```G-Code
 G1 X200.00 E30 F500.0 ; intro line - added for REVO SIX
 ```
-After the ```G-Code G1 X60 E9 F1000 ; intro line ```
-but before the ```G-Code G92 E0 ```
+After the ```G-Code 
+G1 X60 E9 F1000 ; intro line 
+```
+but before the ```G-Code 
+G92 E0 
+```
 
 <p>&nbsp;</p>
 
